@@ -17,3 +17,25 @@ fazer algo =  são operações e as funções.Função e um bloco de codigo que 
 Mostrar = é o console.log() - ele imprime no terminal o que você colocar dentro do parenteses ele vai ser seu olho dentro do programa a fase inteira. sem ele o código roda no escuro
 
 OBS: o computador executa de cima pra baixo, uma linha por vez, e não adivinha nada. Se você mandar mostrar uma variável antes de criá-la, ele reclama. Ele não tem bom senso — ele tem ordem.
+
+## Fase 1 — Tipos de dado
+
+Texto vai entre aspas, número não. São tipos diferentes e se comportam
+de forma diferente, mesmo parecendo iguais na tela.
+
+O `+` faz duas coisas:
+
+- com números, soma: `26 + 10` dá `36`
+- com texto, concatena: `"26" + 10` dá `"2610"`
+
+Já o `*` sempre converte o texto pra número antes, então a conta sai
+certa mesmo com o tipo errado. Por isso o erro passa despercebido:
+funciona na multiplicação e quebra na soma.
+
+Para descobrir o tipo de uma variável:
+
+```
+console.log(typeof carga)
+```
+
+Responde `string` para texto e `number` para número.
