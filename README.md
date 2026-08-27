@@ -1,5 +1,4 @@
-# Fase 0 - Terminal e Git
+# Controle de Academia
 
-O sistema vai ser o meu primeiro sistema feito inteiro de forma manual que será um controle de treinos de academia para controlar repetições séries e exerciciosS
-
-Projeto em construção 
+Sistema de controle de treinos feito de forma manual, para aprender programação do zero.
+Registra exercícios, séries e repetições.
