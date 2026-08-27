@@ -1,12 +1,26 @@
-let exercicio = "supino"
-let carga = 26
-let repeticoes = 12
-let series = 4
-let volume = series * repeticoes * carga
 
-console.log(exercicio)
-console.log(carga)
-console.log(repeticoes)
-console.log(series)
-console.log(carga + 10)
-console.log(typeof carga)
+let treinos = [
+    {
+    exercicio: "supino",
+    carga: 26,
+    repeticoes: 12,
+    series: 4
+    },
+    {   
+    exercicio: "agachamento",
+    carga: 80,
+    repeticoes: 10,
+    series: 5
+    },
+    {
+    exercicio: "remada curvada",
+    carga: 50,
+    repeticoes: 11,
+    series: 4
+    }  
+]
+
+console.log(treinos[0].carga)
+console.log(treinos[1])
+console.log(treinos[2].exercicio)
+console.log(treinos.length)
