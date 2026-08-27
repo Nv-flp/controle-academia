@@ -47,3 +47,5 @@ Length — o array e a fileira inteira com as 3 informações/items dentro isso 
 Posição que não existe — quase tudo certo. O programa continua rodando, isso você acertou e é o ponto importante. Mas "não vai aparecer nada" não é bem verdade: aparece undefined, que é o próprio JavaScript dizendo "não tem valor aqui".
 
  se você tentar ler um campo de algo que é undefined — tipo treinos[3].exercicio — aí sim quebra, com a mensagem Cannot read properties of undefined.
+
+ Fiz um laço que percorria o meu array buscando item por item e imprimindo os valores da soma de volume dos exercicios 
