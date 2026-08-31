@@ -10,6 +10,18 @@ const novoTreino = {
     series: 4
 }
 
-treinos.push(novoTreino)
+let jaExiste = false
 
-fs.writeFileSync("treinos.json", JSON.stringify(treinos, null, 2))
+for (let treino of treinos) {
+    console.log("conferindo:", treino.exercicio, "| jaExiste:", jaExiste)
+    if (treino.exercicio === novoTreino.exercicio) {
+        jaExiste = true
+    }
+}
+
+if (jaExiste === false) {
+  treinos.push(novoTreino)
+  fs.writeFileSync("treinos.json", JSON.stringify(treinos, null, 2))
+} else {
+  console.log("esse exercício já existe")
+}
