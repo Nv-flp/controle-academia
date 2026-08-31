@@ -49,3 +49,11 @@ Posição que não existe — quase tudo certo. O programa continua rodando, iss
  se você tentar ler um campo de algo que é undefined — tipo treinos[3].exercicio — aí sim quebra, com a mensagem Cannot read properties of undefined.
 
  Fiz um laço que percorria o meu array buscando item por item e imprimindo os valores da soma de volume dos exercicios 
+
+ JSON.stringify — estrutura vira texto, pra gravar
+JSON.parse — texto vira estrutura, pra usar
+
+push acrescenta item no fim do array
+gravar exige writeFileSync; sem ele a mudança só existe na memória
+programa rodar sem erro não garante que fez o que você queria
+sem uma regra explícita, nada impede duplicata
