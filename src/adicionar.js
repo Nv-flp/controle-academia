@@ -13,7 +13,7 @@ const novoTreino = {
 let jaExiste = false
 
 for (let treino of treinos) {
-    console.log("conferindo:", treino.exercicio, "| jaExiste:", jaExiste)
+    console.log("conferindo:", treino.exercicio, "| ja existe", jaExiste)
     if (treino.exercicio === novoTreino.exercicio) {
         jaExiste = true
     }
