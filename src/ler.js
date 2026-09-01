@@ -1,12 +1,11 @@
-const fs = require ("fs")
-const texto = fs.readFileSync("treinos.json", "utf-8")
-const treinos = JSON.parse(texto)
+const { carregarTreinos, calcularVolume } = require("./funcoes")
 
+const treinos = carregarTreinos()
 
 let total = 0
 
 for (let treino of treinos) {
-    let volume = treino.carga *treino.series * treino.repeticoes
+    const volume = calcularVolume(treino)
     total += volume
     console.log(treino.exercicio, "-", volume)
 }
