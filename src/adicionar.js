@@ -4,7 +4,7 @@ const texto = fs.readFileSync("treinos.json", "utf-8")
 const treinos = JSON.parse(texto)
 
 const novoTreino = {
-    exercicio: "rosca direta",
+    exercicio: "elevacao lateral",
     carga: 20,
     repeticoes: 12,
     series: 4
