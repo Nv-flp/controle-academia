@@ -9,4 +9,8 @@ function calcularVolume(treino) {
   return treino.carga * treino.series * treino.repeticoes
 }
 
-module.exports = { carregarTreinos, calcularVolume }
+function salvarTreinos(treinos) {
+    fs.writeFileSync("treinos.json", JSON.stringify(treinos, null, 2))
+}
+
+module.exports = { carregarTreinos, calcularVolume, salvarTreinos }
