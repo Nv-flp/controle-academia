@@ -64,3 +64,7 @@ sem uma regra explícita, nada impede duplicata
 função é um bloco de código com nome; definir não executa, só a chamada com () executa
 return devolve o valor pra quem chamou; sem ele o retorno é undefined
 parâmetro é o espaço em branco preenchido na chamada — permite mesma lógica com dados diferentes
+
+definir função não executa nada; só a chamada executa
+module.exports diz o que sai do arquivo; require("./arquivo") traz pra dentro do outro
+o ./ indica arquivo teu; sem ele o Node procura módulo instalado
