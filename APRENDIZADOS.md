@@ -54,6 +54,13 @@ Posição que não existe — quase tudo certo. O programa continua rodando, iss
 JSON.parse — texto vira estrutura, pra usar
 
 push acrescenta item no fim do array
+
 gravar exige writeFileSync; sem ele a mudança só existe na memória
+
 programa rodar sem erro não garante que fez o que você queria
+
 sem uma regra explícita, nada impede duplicata
+
+função é um bloco de código com nome; definir não executa, só a chamada com () executa
+return devolve o valor pra quem chamou; sem ele o retorno é undefined
+parâmetro é o espaço em branco preenchido na chamada — permite mesma lógica com dados diferentes
