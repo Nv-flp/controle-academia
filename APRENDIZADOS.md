@@ -78,3 +78,18 @@ Rota é a combinação de um caminho e um método. GET /treinos significa "me d�
 Requisição e resposta. Quem chama manda uma requisição; teu código devolve uma resposta. No Express são os dois parâmetros que aparecem em toda rota: req e res.
 
 Método HTTP diz a intenção: GET busca, POST cria, PUT atualiza, DELETE remove. Repara que é o teu CRUD, com outros nomes.
+
+req e res - um pega o que chegou e o outro devolve isso 
+
+req.params - especificamente o trecho variável da URL, aquele :id da rota. Em /treinos/3, o req.params.id vale "3". Não é qualquer dado do navegador, é o pedaço do caminho.
+
+req.body — aqui inverteu. Ele não transforma nada; ele é só onde o dado chega. Quem transforma é o express.json(). E o que chega ali é JSON convertido em objeto, não o contrário.
+Fixa a divisão de trabalho: o express.json() traduz, o req.body guarda o resultado.
+
+middleware - codigo que roda antes das rotas 
+
+status http: 200 ok 201 criado 404 nao encontrado 500 erro
+
+ Number -tudo que vem pela URL chega como string. Em /treinos/3, o req.params.id é "3", texto. Como você compara com ===, que confere valor e tipo, "3" === 3 dá false e a rota nunca acha o treino. O Number() converte a string pra número antes da comparação.
+
+id - usar o maior existente caso alguem remova o id vai continuar do ultimo e assim não quebra
