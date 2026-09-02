@@ -1,0 +1,24 @@
+{
+  "name": "controle-academia",
+  "version": "1.0.0",
+  "description": "Sistema de controle de treinos feito de forma manual, para aprender programação do zero. Registra exercícios, séries e repetições.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nv-flp/controle-academia.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Nv-flp/controle-academia/issues"
+  },
+  "homepage": "https://github.com/Nv-flp/controle-academia#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

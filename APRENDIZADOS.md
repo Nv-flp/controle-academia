@@ -68,3 +68,13 @@ parâmetro é o espaço em branco preenchido na chamada — permite mesma lógic
 definir função não executa nada; só a chamada executa
 module.exports diz o que sai do arquivo; require("./arquivo") traz pra dentro do outro
 o ./ indica arquivo teu; sem ele o Node procura módulo instalado
+
+Servidor é um programa que não termina. Diferente de tudo que você fez até agora — que executava e morria — ele fica rodando, escutando uma porta, esperando alguém chamar.
+
+Porta é um número que identifica qual programa recebe o quê no computador. Vamos usar 3000. O endereço vira http://localhost:3000 — localhost significa "esta máquina".
+
+Rota é a combinação de um caminho e um método. GET /treinos significa "me dá os treinos". Cada rota é um pedaço de código que roda quando alguém chama aquele endereço.
+
+Requisição e resposta. Quem chama manda uma requisição; teu código devolve uma resposta. No Express são os dois parâmetros que aparecem em toda rota: req e res.
+
+Método HTTP diz a intenção: GET busca, POST cria, PUT atualiza, DELETE remove. Repara que é o teu CRUD, com outros nomes.
