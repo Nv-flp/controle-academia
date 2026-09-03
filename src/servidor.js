@@ -1,6 +1,5 @@
 const express = require("express")
-const { carregarTreinos, adicionarTreino } =  require("./funcoes")
-
+const { carregarTreinos, adicionarTreino, atualizarTreino, removerTreino } = require("./funcoes")
 const app = express()
 
 app.use(express.json())
@@ -30,40 +29,27 @@ app.post("/treinos", async function (req, res) {
   res.status(201).json(novo)
 })
 
-/* app.put ("/treinos/:id", function (req, res){
-    const treinos = carregarTreinos()
-    const id = Number(req.params.id)
+ app.put("/treinos/:id", async function (req, res) {
+  const id = Number(req.params.id)
+  const linhas = await atualizarTreino(id, req.body.carga)
 
-    for (let treino of treinos) {
-        if (treino.id === id) {
-         treino.carga = req.body.carga
-         salvarTreinos(treinos)
-         return res.json(treino)
-        }
-    }
+  if (linhas === 0) {
+    return res.status(404).json({ erro: "treino nao encontrado" })
+  }
 
-    res.status(404).json({erro: "treino nao encontrado"})
+  res.json({ mensagem: "atualizado" })
 })
 
-app.delete("/treinos/:id", function(req, res){
-    const treinos = carregarTreinos()
-    const id = Number(req.params.id)
+app.delete("/treinos/:id", async function (req, res) {
+  const id = Number(req.params.id)
+  const linhas = await removerTreino(id)
 
-    const listaNova = []
-
-for (let treino of treinos) {
-  if (treino.id !== id) {
-    listaNova.push(treino)
+  if (linhas === 0) {
+    return res.status(404).json({ erro: "treino nao encontrado" })
   }
-}
 
-if (listaNova.length === treinos.length) {
-  return res.status(404).json({ erro: "treino nao encontrado" })
-}
-
-   salvarTreinos(listaNova)
-res.json({ mensagem: "removido" })
-}) */
+  res.json({ mensagem: "removido" })
+})
 
 app.listen(3000, function () {
     console.log("servidor rodando e, http://localhost:3000")
