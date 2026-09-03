@@ -1,16 +1,22 @@
-const fs = require("fs")
 
-function carregarTreinos() {
-  const texto = fs.readFileSync("treinos.json", "utf-8")
-  return JSON.parse(texto)
+const pool = require("./banco")
+
+async function carregarTreinos() {
+  const [linhas] = await pool.query("SELECT * FROM treinos")
+  return linhas
 }
 
 function calcularVolume(treino) {
   return treino.carga * treino.series * treino.repeticoes
 }
 
-function salvarTreinos(treinos) {
-    fs.writeFileSync("treinos.json", JSON.stringify(treinos, null, 2))
+async function adicionarTreino(treino) {
+  const [resultado] = await pool.query(
+    "INSERT INTO treinos (exercicio, carga, repeticoes, series) VALUES (?, ?, ?, ?)",
+    [treino.exercicio, treino.carga, treino.repeticoes, treino.series]
+  )
+  return { id: resultado.insertId, ...treino }
 }
 
-module.exports = { carregarTreinos, calcularVolume, salvarTreinos }
+
+module.exports = { carregarTreinos, calcularVolume, adicionarTreino }
