@@ -21,7 +21,7 @@ Node.js · Express · MySQL · mysql2 · dotenv
 
 ## Status
 
-Backend funcional. Front-end em desenvolvimento.
+Backend funcional. Front-end 
 
 ## Como rodar
 
