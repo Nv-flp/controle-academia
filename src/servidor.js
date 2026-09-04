@@ -3,7 +3,7 @@ const { carregarTreinos, adicionarTreino, atualizarTreino, removerTreino } = req
 const app = express()
 
 app.use(express.json())
-
+app.use(express.static("public"))
 
 app.get("/treinos", async function (req, res) {
   const treinos = await carregarTreinos()
